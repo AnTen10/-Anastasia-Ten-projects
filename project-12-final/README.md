@@ -50,7 +50,7 @@ PostgreSQL\
 Vertica\
 SQL\
 Python ETL\
-Git\
+Git
 
 ---
 
