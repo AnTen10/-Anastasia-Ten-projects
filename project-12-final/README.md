@@ -44,13 +44,13 @@ Vertica DWH (global_metrics)
 
 ## Используемый стек
 
-Python
-Apache Airflow
-PostgreSQL
-Vertica
-SQL
-Python ETL
-Git
+Python\
+Apache Airflow\
+PostgreSQL\
+Vertica\
+SQL\
+Python ETL\
+Git\
 
 ---
 
