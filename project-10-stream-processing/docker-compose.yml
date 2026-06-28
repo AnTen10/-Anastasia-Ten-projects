@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  de-sprint-8:
+    image: cr.yandex/crp10b0j4b07oirst61i/sprint-8:latest
+    ports:
+      - 3002:3002
+      - 15432:5432
+
