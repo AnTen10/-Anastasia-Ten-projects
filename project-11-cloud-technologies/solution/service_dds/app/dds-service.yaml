@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: dds-service
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: dds-service
+
+  template:
+    metadata:
+      labels:
+        app: dds-service
+
+    spec:
+      containers:
+        - name: dds-service
+
+          image: <your-container-registry>/dds-service:1.0
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 5000
+
+          env:
+            - name: KAFKA_HOST
+              value: "<KAFKA_HOST>"
+
+            - name: KAFKA_PORT
+              value: "9091"
+
+            - name: KAFKA_CONSUMER_USERNAME
+              value: "<KAFKA_USERNAME>"
+
+            - name: KAFKA_CONSUMER_PASSWORD
+              value: "<KAFKA_PASSWORD>"
+
+            - name: KAFKA_CONSUMER_GROUP
+              value: "dds-consumer-group"
+
+            - name: KAFKA_SOURCE_TOPIC
+              value: "stg-service-orders"
+
+            - name: KAFKA_DESTINATION_TOPIC
+              value: "dds-orders-enriched"
+
+            - name: PG_WAREHOUSE_HOST
+              value: "<POSTGRES_HOST>"
+
+            - name: PG_WAREHOUSE_PORT
+              value: "6432"
+
+            - name: PG_WAREHOUSE_DBNAME
+              value: "<DATABASE>"
+
+            - name: PG_WAREHOUSE_USER
+              value: "<POSTGRES_USER>"
+
+            - name: PG_WAREHOUSE_PASSWORD
+              value: "<POSTGRES_PASSWORD>"
