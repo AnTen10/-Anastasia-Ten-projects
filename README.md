@@ -99,22 +99,13 @@
 
 ---
 
-# Сейчас изучаю
-
-- оптимизацию Spark-приложений;
-- архитектуру современных Data Platform;
-- ClickHouse;
-- CI/CD для Data Engineering.
-
----
-
 # Контакты
 
 GitHub: https://github.com/AnTen10
 
-Telegram: https://t.me/your_username
+Telegram: https://t.me/Dudosaa
 
-Email: your_email@yandex.ru
+Email: riciticiten@yandex.ru
 
 ---
 
